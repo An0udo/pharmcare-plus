@@ -1,0 +1,341 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('wallpaper.png'); /* مسار صورة الخلفية */
+    background-size: cover; /* تغطية كاملة للخلفية */
+    background-position: center; /* تمركز الصورة */
+    background-repeat: no-repeat; /* عدم تكرار الصورة */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #80CACA; /* لون أكثر توهجًا */
+    padding: 5px 20px;
+    border-radius: 23px; /* تعديل قيمة border-radius */
+    margin: 25px 120px; /* ترك مسافة في بداية ونهاية شريط التنقل */
+    height: 48px; /* تصغير ارتفاع شريط التنقل */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 24px; /* حجم الخط */
+    font-weight: lighter; /* وزن الخط */
+    color: #ffffff; /* لون النص */
+    margin: 0; /* إزالة الهامش الافتراضي */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* إضافة ظل للنص */
+    font-family: 'Montserrat', sans-serif; /* نوع الخط */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* لون الخط أبيض */
+    font-weight: lighter;
+    font-family: 'Montserrat', sans-serif; /* تغيير نوع الخط إلى Montserrat */
+    border-radius: 10px;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #90c8d0;
+    color: #d3d3d3; /* لون الخط رمادي عند التحويم */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.search-bar button img {
+    height: 20px;
+}
+
+main {
+    flex: 1;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero {
+    padding: 20px;
+    border-radius: 15px; /* إضافة زوايا منحنية */
+    margin: 20px auto; /* توسيط العنصر */
+    max-width: 600px; /* تحديد أقصى عرض */
+}
+
+.hero h2 {
+    font-size: 32px; /* تعديل حجم الخط */
+    font-weight: lighter; /* تعديل سمك الخط */
+    font-family: 'Montserrat', sans-serif; /* تعديل نوع الخط */
+    color: #151515; /* لون النص */
+    margin-bottom: 20px;
+}
+
+.hero img {
+    width: 300px;
+    height: auto;
+}
+
+.interaction-checker {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* توسيط العنصر */
+    max-width: 800px; /* تحديد أقصى عرض */
+}
+
+.interaction-checker h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.checker-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-container {
+    background-color: #80CACA; /* لون الخلفية */
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.form-container h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form-container input {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+}
+
+.form-container p {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #d4f1f4;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.warning-container {
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.warning-container h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff0000;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.warning-container .warning-icon {
+    margin-right: 10px;
+}
+
+.warning-container p {
+    font-size: 14px;
+    color: #ff0000;
+}
+
+footer {
+    background-color: rgba(248, 248, 248, 0.378); /* زيادة الشفافية */
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer-content div {
+    flex: 1;
+}
+
+.footer-content h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-content ul li {
+    margin-bottom: 5px;
+}
+
+.footer-content ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.logo-footer {
+    display: flex;
+    align-items: center; /* محاذاة العناصر عموديًا */
+}
+
+.logo-footer img {
+    width: 50px; /* حجم الصورة */
+    margin-right: 4px; /* مسافة بين الصورة والنص */
+}
+
+.dev-tools {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* توسيط العناصر أفقياً */
+}
+
+.dev-tools ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.dev-tools ul li {
+    list-style: none;
+    margin: 0;
+}
+
+.dev-tools img {
+    width: 30px; /* حجم الصورة */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    margin: 0 5px; /* إضافة مسافة أفقية صغيرة بين الصور */
+}
+
+
+.suggestions {
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: #fff;
+    z-index: 1000;
+    width: calc(100% - 42px);
+    margin-left: 1px;
+    border-radius: 0 0 10px 10px;
+}
+
+/*drugs*/
+
+
+.suggestions {
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: #fff;
+    z-index: 1000;
+    width: calc(100% - 20px); /* تعديل العرض ليكون متناسب مع الحقل */
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: -1px; /* تأكيد أن القائمة تبدأ من أسفل الحقل مباشرة */
+}
+
+.suggestions div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions div:hover {
+    background-color: #e91e63; /* تغيير لون الخلفية عند التحويم */
+    color: white; /* تغيير لون النص عند التحويم */
+}
+
+.result-container {
+    background-color: rgba(0, 128, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.result-container h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #008000;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.result-container p {
+    font-size: 14px;
+    color: #008000;
+}
