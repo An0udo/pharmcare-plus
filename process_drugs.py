@@ -1,3 +1,4 @@
+import os
 import datetime
 import threading
 import subprocess
@@ -13,8 +14,6 @@ import importlib.util  # For dynamic module loading
 MODEL_PATH = "interaction_classifier.pkl"
 VECTORIZER_PATH = "vectorizer.pkl"
 LOG_FILE = "interaction_log.txt"
-FLASK_PORT = 5001
-GUNICORN_PORT = 8009
 
 logging.basicConfig(filename="error.log", level=logging.ERROR)
 
@@ -140,10 +139,10 @@ def process_drugs():
         return jsonify({"error": "Internal Server Error"}), 500
 
 def start_flask_app():
-    app.run(debug=True, port=FLASK_PORT)
+    app.run(debug=True, port=os.getenv('PORT', 8000))
 
 def start_gunicorn():
-    subprocess.Popen(["gunicorn", "process_drugs:app", "-b", f"0.0.0.0:{GUNICORN_PORT}", "--reload", "--log-level", "debug"])  
+    subprocess.Popen(["gunicorn", "process_drugs:app", "-b", f"0.0.0.0:{os.getenv('PORT', '8000')}", "--reload", "--log-level", "debug"])  
 
 if __name__ == "__main__":
     threading.Thread(target=start_gunicorn).start()
