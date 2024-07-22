@@ -51,7 +51,7 @@ typing_extensions==4.5.0
 tzdata==2023.3
 urllib3==1.26.15
 wasabi==0.10.1
-Werkzeug==2.3.6
+Werkzeug>=3.0.0
 wheel==0.38.4
 wrapt==1.14.1
 xgboost==1.7.6
