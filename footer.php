@@ -1,7 +1,7 @@
 <footer>
     <div class="footer-content">
         <div class="logo-footer">
-            <img src="logo.png" alt="Pharmacare+ Logo">
+            <img src="Img/logo.png" alt="Pharmacare+ Logo">
             <p style="font-weight:bold;" data-key="stay_safe">Stay Safe with Pharmacare+</p>
         </div>
         <div class="links">
@@ -21,9 +21,9 @@
         <div class="dev-tools">
             <h3 data-key="dev_tools">Dev Tools</h3>
             <ul>
-                <li><img src="python.png" alt="Python"></li>
-                <li><img src="rdkit.png" alt="RDKit"></li>
-                <li><img src="flask.png" alt="Flask"></li>
+                <li><img src="Img/python.png" alt="Python"></li>
+                <li><img src="Img/rdkit.png" alt="RDKit"></li>
+                <li><img src="Img/flask.png" alt="Flask"></li>
             </ul>
         </div>
     </div>
