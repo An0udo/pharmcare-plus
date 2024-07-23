@@ -20,10 +20,6 @@ logging.basicConfig(filename="error.log", level=logging.ERROR)
 app = Flask(__name__)
 CORS(app, resources={r"/process_drugs": {"origins": "*", "methods": ["POST", "OPTIONS"]}})
 
-@app.route('/')
-def home():
-    return "Welcome to Pharmacare+"
-
 # Load models and vectorizer (using dynamic import for better organization)
 def load_model_and_vectorizer():
     try:
